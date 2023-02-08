@@ -64,9 +64,7 @@ def clean_data(data):
         ar = data['response_tweet_id'].values
         for idx in range(len(ar)):
             if isinstance(ar[idx],float):
-                data['response_tweet_id'].values[idx] = []
-            else:
-                data['response_tweet_id'].values[idx] = ar[idx].split(',')
+                data['response_tweet_id'].values[idx] = -1
 
         ar = data['in_response_to_tweet_id'].values
         for idx in range(len(ar)):
