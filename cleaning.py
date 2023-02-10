@@ -75,10 +75,16 @@ def clean_data(data):
         clean_data = {}
         for col in data.columns:
             clean_data[col] = data[col].values
+        print(clean_data['response_tweet_id'][2483])
+        print(clean_data['response_tweet_id'][2483] == -1)
+        print(isinstance(clean_data['response_tweet_id'][2483],float))
 
         df = pd.DataFrame(clean_data)
         df.to_csv("clean_data.csv")
+
         print("Cleaning complete")
     else:
+        data2 = pd.read_csv("clean_data.csv")
+        print(data2['response_tweet_id'].values[2483])
         print("Clean data csv already exists :)")
 

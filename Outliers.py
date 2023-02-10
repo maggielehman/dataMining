@@ -25,8 +25,9 @@ def plot_outliers(data):
     col_response = data['response_tweet_id'].values
     for idx in range(len(col_response)):
         if type(col_response[idx]) == float:
-            print(isInstance(col_response[idx],float))
-        if col_response[idx] != -1 and type(col_response[idx]) != float:
+            print(isinstance(col_response[idx],float))
+            print(col_response[idx])
+        if col_response[idx] != -1:
             temp_array = col_response[idx].replace("[", "").replace("]", "").split(",")
             if temp_array[0] != "":
                 length_tweet_response.append(len(temp_array))
