@@ -57,13 +57,14 @@ def plot_missing_data(data):
     plt.show()
 
 
+
 # Cleans the data and writes it to a csv for future use, if file already exists it doesn't do anything
 def clean_data(data):
     if not os.path.exists('clean_data.csv'):
         # clean data
         ar = data['response_tweet_id'].values
         for idx in range(len(ar)):
-            if isinstance(ar[idx],float):
+            if isinstance(ar[idx],float) or ar[idx] == '' or ar[idx] is None:
                 data['response_tweet_id'].values[idx] = -1
 
         ar = data['in_response_to_tweet_id'].values
