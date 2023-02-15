@@ -17,7 +17,7 @@ from scipy.stats import ttest_ind, ttest_rel
 from scipy import stats
 
 # read data using pandas
-data = pd.read_csv("twcs.csv")
+data = pd.read_csv("clean_data.csv")
 
 # plot_missing_data(data)
 clean_data(data)
