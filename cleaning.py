@@ -75,9 +75,9 @@ def clean_data(data):
         clean_data = {}
         for col in data.columns:
             clean_data[col] = data[col].values
-        print(clean_data['response_tweet_id'][2483])
-        print(clean_data['response_tweet_id'][2483] == -1)
-        print(isinstance(clean_data['response_tweet_id'][2483],float))
+        clean_data['formatted_created_at'] = []
+        for row in data['created_at'].values:
+            clean_data['formatted_created_at'].append(row[4:10]+' '+row[-4:])
 
         df = pd.DataFrame(clean_data)
         df.to_csv("clean_data.csv")

@@ -17,7 +17,7 @@ warnings.filterwarnings("ignore")
 # from scipy import stats
 
 # read data using pandas
-data = pd.read_csv("clean_data.csv")
+data = pd.read_csv("twcs.csv")
 
 # plot_missing_data(data)
 clean_data(data)
