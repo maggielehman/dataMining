@@ -3,18 +3,18 @@
 # Maggie Lehman
 # Sofia Bzhilyanskaya
 
-import numpy as np
+# import numpy as np
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+# import seaborn as sns
+# import matplotlib.pyplot as plt
 import warnings
 
 from cleaning import plot_missing_data, clean_data
 from Outliers import plot_outliers
 
 warnings.filterwarnings("ignore")
-from scipy.stats import ttest_ind, ttest_rel
-from scipy import stats
+# from scipy.stats import ttest_ind, ttest_rel
+# from scipy import stats
 
 # read data using pandas
 data = pd.read_csv("clean_data.csv")
